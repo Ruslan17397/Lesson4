@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Завдання на курси">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+       
+        <nav class="menu">
+           <div class="logo">MNTN</div>
+            <ul>
+                <li>Equipment</li>
+                <li>About us</li>
+                <li>Blog</li>
+            </ul>
+            <div class="account"><i class="material-icons">account_circle</i>Account</div>
+        </nav>
+        <div class="slider">
+            <div class="social">
+              <div class="follow">Follow us</div>
+               <div class="instagram"><img src="images/Instagram.png" alt=""></div>
+                <div class="twitter"><img src="images/Twitter.png" alt=""></div>
+                
+            </div>
+            <div class="text">
+            <div class="item_title">A Hiking guide</div>
+            <div class="main">Be prepared for the Mountains and beyond!</div>
+            <div class="scroll">scroll down <i class="material-icons">arrow_downward</i></div>
+            </div>
+            <div class="trig">
+              
+            </div>
+        </div>
+        
+        <div class="bg"></div>
+        
+    </header>
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="row"  data-class="fade-up">
+                <div class="col-6">
+                   
+                    <div class="tite">
+                    <div class="item_title">
+                       GEt Started
+                        </div>
+                    <div class="main_title">
+                        What level of hiker are you?
+                    </div>
+                        </div>
+                    <div class="description">
+                        Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?
+                    </div>
+                    <div class="more">read more<i class="material-icons">arrow_forward</i></div>
+                </div>
+                <div class="col-6">
+                    <img src="images/1.png" alt="">
+                </div>
+            </div>
+            
+            
+                        <div class="row" data-class="fade-up">
+                     
+                <div class="col-6">
+                   
+                    <div class="tite">
+                    <div class="item_title">
+                      Hiking Essentials
+                        </div>
+                    <div class="main_title">
+                        Picking the right Hiking Gear!
+                    </div>
+                        </div>
+                    <div class="description">
+                        The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have. Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.
+                    </div>
+                    <div class="more">read more<i class="material-icons">arrow_forward</i></div>
+                    
+                </div>
+                   <div class="col-6">
+                    <img src="images/2.png" alt="">
+                </div>
+            </div>
+            
+            
+            
+                        <div class="row" data-class="fade-up">
+                <div class="col-6">
+                   
+                    <div class="tite">
+                    <div class="item_title">
+                       where you go is the key
+                        </div>
+                    <div class="main_title">
+                      Understand Your Map & Timing
+                    </div>
+                        </div>
+                    <div class="description">
+                     To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction..
+                    </div>
+                    <div class="more">read more<i class="material-icons">arrow_forward</i></div>
+                </div>
+                <div class="col-6">
+                    <img src="images/3.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+       
+    </div>
+    
+    
+    <footer>
+    <section class="desc_wrap">
+    <div>
+    <div class="logo">MNTN</div>
+       <div class="desc">Get out there & discover your next slope, mountain & destination!</div>
+        </div>
+        <div class="copyright">
+            Copyright 2019 MNTN, Inc. Terms & Privacy
+        </div>
+    </section>
+    <div class="down_menu">
+        <ul>
+            <li>More on The Blog</li>
+            <li>About MNTN</li>
+            <li>Contributors & Writers</li>
+            <li>Write For Us</li>
+            <li>Contact Us</li>
+            <li>Privacy Policy</li>
+        </ul>
+        <ul>
+            <li>More on MNTN</li>
+            <li>The Team</li>
+            <li>Jobs</li>
+            <li>Press</li>
+        </ul>
+       
+    </div>
+     <div class="copyright_mob">
+            Copyright 2019 MNTN, Inc. Terms & Privacy
+        </div>
+</footer>
+</section>
+
+
+  <script>
+      alert('Весь функціонал самописний без використання бібліотек. Слайдер сам генерує зображення і кнопки для управління(потрібно лише передати масив з посиланнями на зображення).')
+ let allanim = document.querySelectorAll(".row .col-12 .row");
+let control = document.querySelector('.trig');
+      window.addEventListener('scroll',()=>{
+          
+          allanim.forEach((el)=>{
+
+              let top = el.getBoundingClientRect().top;
+              let h = window.innerHeight;
+              let elOffset = 200;
+              if(top < h - elOffset){
+              el.classList.add(el.dataset.class);
+          }else{
+                       
+              el.classList.remove(el.dataset.class);
+                          }
+          })
+      })
+  </script>
+<script>
+    let id = 0;
+    let bg = document.querySelector('.bg');
+    let allImg;
+let bgurls = ['images/slider/1.jpg','images/slider/2.webp','images/slider/3.jpg','images/slider/4.jpg','images/slider/5.jpg'];
+    bgurls.forEach((url,i)=>{
+        
+        let bgimg = document.createElement('img');
+        if(i==0){
+            bgimg.classList.add('show');
+            control.innerHTML+='<div class="trig_item active" onclick="setSlide(0)">Start</div>';
+        }else{
+            control.innerHTML+='<div class="trig_item" onclick="setSlide('+i+')">'+i+'</div>';
+        }
+        bgimg.src = url; 
+        bg.appendChild(bgimg);
+    });
+    
+      setSlide = (url_id)=>{
+        id = url_id;
+        document.querySelector('.bg img.show').classList.remove('show');
+        allImg[url_id].classList.add('show');
+        document.querySelector(".trig .trig_item.active").classList.remove('active');
+       document.querySelectorAll(".trig .trig_item")[url_id].classList.add('active');
+        
+    }
+    allImg = document.querySelectorAll('.bg img');
+    setInterval(()=>{
+        (id == bgurls.length-1)? id = 0 : id++;
+        setSlide(id);
+    },5000);
+    
+  
+    </script>
+<script>
+document.querySelector(".scroll").addEventListener('click',()=>{
+ window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+    })
+    
+    
+    </script>
+</body>
+</html>
